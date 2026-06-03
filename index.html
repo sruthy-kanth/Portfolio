@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>Sruthy Kanth | Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -11,25 +15,157 @@
             </div>
 
             <div>
-                <p>Home</p>
-                <p>About</p>
-                <p>Education</p>
-                <p>Skills</p>
-                <p>Projects</p>
-                <p>Certificates</p>
-                <p>Contact</p>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#contact">Contact</a>
             </div>
         </header>
         
-        <section>
-            <h1>Sruthy Kanth</h1>
+        <section id="hero">
 
-            <h2>Computer Science (AI) Student</h2>
+            <div>
+                <h1>Sruthy Kanth</h1>
 
-            <p>Curious enough to ask <br> Stubborn enough to build</p>
+                <h2>Computer Science (AI) Student</h2>
+
+                <p>Curious enough to ask <br> Stubborn enough to build</p>
+            </div>
+
+            <div>
+
+                <img src="images/Photo1.jpg" alt="Sruthy Kanth">
+
+            </div>
+
+        </section>
+
+        <section id="about">
+            <div class="about-item">
+
+                <h2>About Me</h2>
+                <p>Hi, I'm Sruthy. My journey into tech started with curiosity and a willingness to try things I knew nothing about. Today, I'm a CS(AI) student who enjoys building projects, learning new technologies, and figuring out how ideas can be transformed into real solutions. I believe the best way to learn is to create, experiment, and keep improving.</p>
+
+            </div>
+
+            <div class="education-item">
+                <h2>Education</h2>
+                <p>Bachelor of Technology in Computer Science and Engineering (Artificial Intelligence) <br> 2025 - 2029 <br> Muthoot Institute of Technology and Science, Kochi</p>
+                <p>Higher Secondary Education (Bio-Maths)<br> 2023 - 2025 <br> Carmel CMI Public School, Vazhakulam</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>MATLAB</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Development Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>Visual Studio Code</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                    <li>Leadership</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div>
+            <h2>Projects</h2>
+            <p>A collection of projects I built while learning, experimenting, and solving real problems.</p>
+            <a href="projects.html " target="_blank">View Projects</a>
+            </div>
+
+            
+           <!-- <div class="image-slider">
+                <img src="images/project1.png" alt="Project 1">
+                <img src="images/project2.png" alt="Project 2">
+                <img src="images/project3.png" alt="Project 3">
+            </div>-->
+            
         </section>
 
         
+
+        <section id="certificates">
+            <div class="certificates-container">
+            <h2>Certificates</h2>
+            <div class="certificate-card">
+                <img src="images/gfs.webp" alt="Google" class="certificate-logo">                
+                <h3>Startup School: Prompt to Prototype</h3>
+                <p>Google for Startups</p>
+                <a href="certificate/Prompt_to_prototype.pdf" target="_blank">View Certificate</a>
+            </div>
+
+             <div class="certificate-card">
+                <img src="images/nasscom.png" alt="NASSCOM" class="certificate-logo">
+                <h3>Digital Application Fundamentals - STEM</h3>
+                <p>NASSCOM FutureSkills Prime</p>
+                <a href="certificate/nasscomcertificate.pdf" target="_blank">View Certificate</a>
+                
+            </div>
+
+             <div class="certificate-card" >
+                <img src="images/cambridge.webp" alt="LinguaSkill" class="certificate-logo">
+                <h3>LinguaSkill Business - English Assessment</h3>
+                <p>Cambridge University Press and Assessment English</p>
+                <a href="certificate/linguaskills.pdf" target="_blank">View Certificate</a>
+                
+            </div>
+
+             <div class="certificate-card">
+                <img src="images/nptel.webp" alt="NPTEL" class="certificate-logo">
+                <h3>NPTEL Discrete Mathematics</h3>
+                <p>IIT Madras</p>
+                <a href="certificate/DM_Nptel.pdf" target="_blank">View Certificate</a>
+                
+            </div>
+        </section>
+
+        <section id="contact">
+            <div>
+            <h2>Let's Contact</h2>
+            <p class="contact-text">
+                Have a project, opportunity, or just want to connect?<br> Feel free to reach out. 
+            </p>
+            <div class="contact-icons">
+            <a href ="mailto:sruthykanth06@gmail.com" target="_blank"><img src="images/Email.png" alt="Email" width="50px"></a>
+            <a href="https://www.linkedin.com/in/sruthy-kanth/" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" width="50px"></a>
+            <a href="https://github.com/sruthy-kanth" target="_blank"><img src="images/github.png" alt="GitHub" width="50px"></a>
+            </div>
+            </div>
+            <div class="contact-image-container">
+                <img src="images/contact.png" alt="Contact Image" class="contact-image">
+            </div>
+        </section>
 
     </body>
     
