@@ -3,44 +3,78 @@ html{
 }
 
 body{
-    margin: 0;
+    margin:0;
+    padding-top:0;
+    background-color:#E9E1DD;
 }
-
 
 header{
     background-color: #333;
-    color:white;
-    padding: 20px 60px;
+    color: white;
+    padding: 25px 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .nav-links{
-    display: none;
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: -250px;
+
+    width: 220px;
+    height: 100vh;
+
+    background-color: #333;
+    padding: 100px 30px;
+
+    transition: left 0.3s ease;
+    z-index: 1000;
 }
+
 
 .nav-links a{
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+     margin-bottom: 20px;
+     font-size: larger;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .nav-links.active{
-    display: flex;
-    flex-direction: column;
+    left: 0;
 }
 
 .hamburger{
-    font-size:28px;
+    font-size: 28px;
     cursor: pointer;
+    position: fixed;
+    top: 14px;
+    left: 40px;
+    z-index: 1001;
+    color: white;
 }
 
 section{
     
     min-height: 100vh;
     padding: 60px;
-    box-sizing:border-box;
+    box-sizing:border-box;opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #hero{
@@ -63,6 +97,7 @@ section{
     text-align:center;
     font-size: 1.5em;
     font-family: Georgia, serif;
+    animation: fadeInUp 2s ease forwards;
 }
 
 #hero img{
@@ -148,13 +183,50 @@ section{
     padding: 25px;
     background-color: white;
     border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 #projects{
     background-color: #333;
     color: white;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.project-gallery{
+    flex: 1;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.gallery-track{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: scrollUp 18s linear infinite;
+}
+
+.gallery-track img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@keyframes scrollUp{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-50%);
+    }
 }
 #projects p{
     max-width: 600px;
@@ -167,16 +239,11 @@ section{
     align-items: center;
 }
 
-#projects .image-slider{
-    align-self:center;
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-}
-
-
 #project_redirect{
     background-color: white;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
 }
 
 #project_redirect h2{
@@ -225,6 +292,12 @@ section{
     text-decoration: none;
 
     border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redirect_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 #certificates{
@@ -249,6 +322,12 @@ section{
     color: white;
     padding: 25px;
     border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
 .certificate-card a{
@@ -332,3 +411,15 @@ a{
 .certificate-card a:hover{
     transform: scale(1.05);
 }
+
+/*animation*/
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
