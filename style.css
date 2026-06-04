@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
 }
@@ -6,6 +10,30 @@ body{
 header{
     background-color: #333;
     color:white;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    display: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.nav-links.active{
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger{
+    font-size:28px;
+    cursor: pointer;
 }
 
 section{
@@ -168,6 +196,7 @@ section{
     text-decoration: none;
     width: fit-content;
     border-radius: 30px;
+    display: inline-block;
     
 }
 .redirect-container{
@@ -292,4 +321,14 @@ section{
     width: 100%;
     height: 100%;
     object-fit:cover;
+}
+
+a{
+    transition: 0.3s ease;
+}
+
+#projects a:hover,
+.redirect-container a:hover,
+.certificate-card a:hover{
+    transform: scale(1.05);
 }
